@@ -114,8 +114,8 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
-  height: 85%;
+  width: 70%;
+  height: 100%;
   margin-bottom: 10%;
 }
 
@@ -137,7 +137,6 @@ p {
 }
 
 .other_projects img {
-    height: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -151,12 +150,12 @@ p {
 }
 
 .flex-item img {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
 }
 
-.Resume {
-padding: 40px;
+/* .Resume {
+padding-bottom: 20px;
 height: 300px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 background-color:black;
@@ -167,6 +166,10 @@ color: #ffffff;
     color: rgba(228, 151, 8, 0.89);
 }
 
+#Resume {
+    padding: 50px;
+} */
+
 .contact {
     padding: 50px;
     height: 300px;
@@ -176,8 +179,24 @@ color: #ffffff;
     padding-bottom: 20px;
   }
 
-.contact h3 {
+.contact h2 {
     color: rgba(228, 151, 8, 0.89);
 }
-  
-  
+#Camil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 100px;
+        width: 100%;
+        margin-bottom: 25px;
+        background-image: url(../images/02-run-buddy.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+  }
