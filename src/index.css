@@ -5,13 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: url(./assets/photos/coding-pic.jpeg)
+  background: url(../src/assets/photos/coding-pic.png);
+
 }
 
-#aboutContainer param {
-  text:white
-}
-
+#aboutContainer p{
+  color: white;
+  font-weight: bold; 
+  } 
 #project {
   color: white;
   font-weight: bolder;
