@@ -9,8 +9,23 @@ body {
 }
 
 #project {
-  color: gray;
+  color: white;
   font-weight: bolder;
+}
+#aboutMe {
+  color: white;
+  font-weight: bolder;
+}
+#contactMe {
+  color: white;
+  font-weight: bolder;
+}
+#myResume {
+  color: white;
+  font-weight: bolder;
+}
+#resume {
+  color: white;
 }
 
 code {

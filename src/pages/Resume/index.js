@@ -2,9 +2,9 @@ import React from "react";
 
 function Resume() {
   return (
-    <section>
+    <section id='resume'>
       <div>
-        <h1> My Resume</h1>
+        <h1 id='myResume'> My Resume</h1>
 
         <p>
           {" "}
