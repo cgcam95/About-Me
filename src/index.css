@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./assets/photos/coding-pic.jpeg)
+}
+
+#project {
+  color: gray;
+  font-weight: bolder;
 }
 
 code {

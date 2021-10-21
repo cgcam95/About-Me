@@ -1,0 +1,63 @@
+import React from 'react';
+import Projects from '../../components/Projects';
+import {Container, Row, Col} from 'react-bootstrap';
+
+const work = [
+    {
+        image: '/assets/photos/note-taker.png',
+        title: 'Note-Taker',
+        description: 'A simple note taker to keep track of your notes',
+        github: 'https://github.com/cgcam95/note-taker',
+        deployed: 'https://cams-notetaker.herokuapp.com/',
+    },
+    {
+        image: '',
+        title: '',
+        description: '',
+        github: '',
+        deployed: '',
+    },
+    {
+        image: '',
+        title: '',
+        description: '',
+        github: '',
+        deployed: '',
+    },
+    {
+        image: '',
+        title: '',
+        description: '',
+        github: '',
+        deployed: '',
+    },
+];
+
+function Portfolio() {
+    return (
+        <Container>
+        <h2 id='project'>My Projects</h2>
+        <Row>
+            {work.map(project =>{
+                console.log(project)
+                return(
+                    <Col>
+                    <Projects
+                    image={project.image}
+                    title={project.title}
+                    description={project.description}
+                    github={project.github}
+                    deployed={project.deployed}
+                    
+                    />
+                    </Col>
+                )
+            })}
+        
+
+        </Row>
+        </Container>
+    )
+};
+
+export default Portfolio;
