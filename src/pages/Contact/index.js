@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { validateEmail } from "../../utils/helpers";
+import { useForm } from '@formspree/react';
 
 
 function Contact() {
-  const [formState, setFormState] = useState({
+  const [formState, setFormState] = useForm({
     name: "",
     email: "",
     message: "",
@@ -11,7 +12,7 @@ function Contact() {
 
   const { name, email, message } = formState;
 
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useForm("");
 
   function handleChange(e) {
     if (e.target.name === "email") {
@@ -41,45 +42,33 @@ function Contact() {
     console.log(formState);
   }
 
-  return (
-    <section id='toContactMe'>
-      <h1 id='contactMe'>Contact me</h1>
-      <form id="contact-form" onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            defaultValue={name}
-            onChange={handleChange}
-            name="name"
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email address:</label>
-          <input
-            type="email"
-            defaultValue={email}
-            name="email"
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            name="message"
-            defaultValue={message}
-            onChange={handleChange}
-            rows="5"
-          />
-        </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  );
-}
+return (
+  <Form onSubmit={handleSubmit}>
+
+    <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Name</Form.Label>
+    <Form.Control type="name" placeholder="Enter name" />
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="formBasicEmail">
+    <Form.Label>Email address</Form.Label>
+    <Form.Control type="email" placeholder="Enter email" />
+    <Form.Text className="text-muted">
+      We'll never share your email with anyone else.
+    </Form.Text>
+  </Form.Group>
+
+  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Message</Form.Label>
+    <Form.Control as="textarea" rows={3} />
+  </Form.Group>
+
+  <Button variant="primary" type="submit">
+    Submit
+  </Button>
+</Form>
+
+)
+};
 export default Contact;
+
