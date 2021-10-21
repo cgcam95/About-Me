@@ -8,6 +8,10 @@ body {
   background: url(./assets/photos/coding-pic.jpeg)
 }
 
+#aboutContainer param {
+  text:white
+}
+
 #project {
   color: white;
   font-weight: bolder;
@@ -27,6 +31,17 @@ body {
 #resume {
   color: white;
 }
+#contactName {
+  color: white;
+}
+#contactEmail {
+  color: white;
+}
+#contactMessage {
+  color: white;
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
